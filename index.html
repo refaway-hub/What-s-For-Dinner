@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What's For Dinner</title>
+    <link rel="stylesheet" href="New folder/style.css/style.css">
+    <!-- مكتبة الأيقونات والخط -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="custom-navbar">
+        <div class="navbar-container">
+            <div class="nav-brand">
+                <div class="brand-logo"><i class="fa-solid fa-utensils"></i></div>
+                <div class="brand-text">
+                    <h2>What's For Dinner</h2>
+                    <p>Your daily meal inspiration</p>
+                </div>
+            </div>
+            <div class="nav-actions">
+                <button class="nav-icon-btn"><i class="fa-solid fa-bookmark"></i></button>
+                <button class="nav-icon-btn"><i class="fa-solid fa-clock-rotate-left"></i></button>
+                <button class="nav-icon-btn"><i class="fa-solid fa-gear"></i></button>
+                <div class="nav-profile">
+                    <img src="New folder/avatar-2-CwUcGkzI.jpg" alt="User Avatar">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Card Container -->
+    <main class="container">
+        <div class="recipe-card">
+            
+            <!-- Left Side (Image & Stats) -->
+            <div id="recipeImageSide" class="recipe-image-side">
+                <div id="ratingBadge" class="rating-badge">
+                    <i class="fa-solid fa-star"></i> 4.7 <span>(412 reviews)</span>
+                </div>
+                
+                <div class="stats-overlay">
+                    <div class="stat-item">
+                        <i class="fa-solid fa-clock"></i>
+                        <span class="stat-label">Prep Time</span>
+                        <span id="prepTime" class="stat-value">15 min</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fa-solid fa-fire-burner"></i>
+                        <span class="stat-label">Cook Time</span>
+                        <span id="cookTime" class="stat-value">240 min</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fa-solid fa-user-group"></i>
+                        <span class="stat-label">Servings</span>
+                        <span id="servings" class="stat-value">4 people</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side (Details & Tabs) -->
+            <div class="recipe-details-side">
+                
+                <div class="details-header">
+                    <div class="tags">
+                        <span id="tagDifficulty" class="tag tag-easy">Easy</span>
+                        <span id="tagRegion" class="tag tag-region">American</span>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="icon-btn"><i class="fa-solid fa-bookmark"></i></button>
+                        <button class="icon-btn"><i class="fa-solid fa-share-nodes"></i></button>
+                    </div>
+                </div>
+                
+                <h2 id="recipeTitle" class="recipe-title">BBQ Pulled Pork</h2>
+                <p id="recipeSubtitle" class="recipe-subtitle">Slow-cooked tender pork in smoky barbecue sauce</p>
+
+                <!-- Alert Banner -->
+                <div class="alert-banner">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    <div class="alert-text">
+                        <strong id="alertTitle">Extended Preparation Time</strong>
+                        <p id="alertDesc">This recipe requires more than 45 minutes to prepare. Plan accordingly!</p>
+                    </div>
+                </div>
+
+                <!-- Tabs -->
+                <div class="tabs">
+                    <div id="tabIngredients" class="tab active" onclick="showTab('ingredients')"><i class="fa-solid fa-list-ul"></i> Ingredients</div>
+                    <div id="tabInstructions" class="tab" onclick="showTab('instructions')"><i class="fa-solid fa-book-open"></i> Instructions</div>
+                    <div id="tabNutrition" class="tab" onclick="showTab('nutrition')"><i class="fa-solid fa-chart-pie"></i> Nutrition</div>
+                    <div id="tabTips" class="tab" onclick="showTab('tips')"><i class="fa-solid fa-lightbulb"></i> Chef's Tips</div>
+                </div>
+
+                <!-- Scrollable Content Box -->
+                <div class="scrollable-content">
+                    <ul id="ingredientsList" class="content-box ingredients-list"></ul>
+                    <ul id="instructionsList" class="content-box instructions-list" style="display: none;"></ul>
+                    <div id="nutritionGrid" class="content-box nutrition-grid" style="display: none;"></div>
+                    <ul id="tipsList" class="content-box tips-list" style="display: none;"></ul>
+                </div>
+
+                <!-- Fixed Footer Button -->
+                <div class="details-footer">
+                    <button id="generateBtn" class="generate-btn">
+                        <i class="fa-solid fa-rotate"></i> Try Another Recipe
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="New folder (2)/script.js"></script>
+</body>
+</html>
